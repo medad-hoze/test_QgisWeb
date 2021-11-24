@@ -36,10 +36,6 @@ var map = new mapboxgl.Map({
  attributionControl: false
 });
 map.addControl(new mapboxgl.NavigationControl(), 'top-left');
-map.addControl(new mapboxgl.AttributionControl({
-    customAttribution: '<a href="https://github.com/tomchadwin/qgis2web" target="_blank">qgis2web</a> &middot;,
-    compact: false
-}));
 var autolinker = new Autolinker({truncate: {length: 30, location: 'smart'}});
 
 map.on('click', 'lyr_Building_0_0', function (e) {
