@@ -45,15 +45,6 @@ var autolinker = new Autolinker({truncate: {length: 30, location: 'smart'}});
 map.on('click', 'lyr_Building_0_0', function (e) {
     var description = '<table>\
                     <tr>\
-                        <td colspan="2">' + (e.features[0].properties['OBJECTID'] !== null ? autolinker.link(e.features[0].properties['OBJECTID'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (e.features[0].properties['data_type'] !== null ? autolinker.link(e.features[0].properties['data_type'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (e.features[0].properties['BLOCK_NAME'] !== null ? autolinker.link(e.features[0].properties['BLOCK_NAME'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
                         <td colspan="2">' + (e.features[0].properties['RefName'] !== null ? autolinker.link(e.features[0].properties['RefName'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
