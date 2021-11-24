@@ -17,7 +17,7 @@
         <title></title>
     </head>
     <body>
-        <div id="map">
+        <div id="map" style="border-color: coral; border-style: solid;">
             <nav id="menu"></nav>
               <div id="distance" class="distance-container"></div>
         </div>
@@ -37,10 +37,7 @@ var map = new mapboxgl.Map({
  attributionControl: false
 });
 map.addControl(new mapboxgl.NavigationControl(), 'top-left');
-map.addControl(new mapboxgl.AttributionControl({
-    customAttribution: '<a href="https://github.com/tomchadwin/qgis2web" target="_blank">qgis2web</a> &middot; <a href="https://github.com/mapbox/mapbox-gl-js" target="_blank">Mapbox GL JS</a> &middot; <a href="https://qgis.org" target="_blank">QGIS</a>',
-    compact: false
-}));
+
 var autolinker = new Autolinker({truncate: {length: 30, location: 'smart'}});
 
 map.on('click', 'lyr_BLDG_cut_1_0', function (e) {
